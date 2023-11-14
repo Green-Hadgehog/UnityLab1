@@ -13,17 +13,10 @@ namespace _Source.Core
       { GameResource.Stone, new ObservableInt(0) }
     };
 
-    private const int INCREASE_DELTA = 1;
-
     public void ChangeResource(GameResource r, int v)
       => _bank[r].Value += v;
 
     public ObservableInt GetResource(GameResource r)
       => _bank[r];
-
-    public void Click(int resourceNumber)
-    {
-      ChangeResource((GameResource)resourceNumber, INCREASE_DELTA);
-    }
   }
 }

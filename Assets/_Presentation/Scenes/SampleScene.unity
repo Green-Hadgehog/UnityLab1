@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 17916475}
   - component: {fileID: 17916474}
   - component: {fileID: 17916473}
+  - component: {fileID: 17916476}
   m_Layer: 5
   m_Name: Button (Humans)
   m_TagString: Untagged
@@ -206,10 +207,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198111010}
-        m_TargetAssemblyTypeName: _Source.Core.ResourceBank, Assembly-CSharp
-        m_MethodName: Click
-        m_Mode: 3
+      - m_Target: {fileID: 17916476}
+        m_TargetAssemblyTypeName: _Source.Core.ProductionBuilding, Assembly-CSharp
+        m_MethodName: IncreaseResource
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -256,6 +257,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17916471}
   m_CullTransparentMesh: 1
+--- !u!114 &17916476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17916471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2ade2cadc743c4fa76dc2c18052c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resourceBank: {fileID: 1198111010}
+  _increaseDelta: 1
+  _resource: 0
 --- !u!1 &56380721
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,8 +305,8 @@ RectTransform:
   - {fileID: 17916472}
   - {fileID: 122527598}
   - {fileID: 1815223971}
-  - {fileID: 2051231836}
   - {fileID: 76516631}
+  - {fileID: 2051231836}
   m_Father: {fileID: 200111374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -348,6 +364,7 @@ GameObject:
   - component: {fileID: 76516634}
   - component: {fileID: 76516633}
   - component: {fileID: 76516632}
+  - component: {fileID: 76516635}
   m_Layer: 5
   m_Name: Button (Stone)
   m_TagString: Untagged
@@ -419,14 +436,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198111010}
-        m_TargetAssemblyTypeName: _Source.Core.ResourceBank, Assembly-CSharp
-        m_MethodName: Click
-        m_Mode: 3
+      - m_Target: {fileID: 76516635}
+        m_TargetAssemblyTypeName: _Source.Core.ProductionBuilding, Assembly-CSharp
+        m_MethodName: IncreaseResource
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -469,6 +486,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76516630}
   m_CullTransparentMesh: 1
+--- !u!114 &76516635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76516630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2ade2cadc743c4fa76dc2c18052c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resourceBank: {fileID: 1198111010}
+  _increaseDelta: 1
+  _resource: 3
 --- !u!1 &122527597
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +513,7 @@ GameObject:
   - component: {fileID: 122527601}
   - component: {fileID: 122527600}
   - component: {fileID: 122527599}
+  - component: {fileID: 122527602}
   m_Layer: 5
   m_Name: Button (Food)
   m_TagString: Untagged
@@ -552,14 +585,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198111010}
-        m_TargetAssemblyTypeName: _Source.Core.ResourceBank, Assembly-CSharp
-        m_MethodName: Click
-        m_Mode: 3
+      - m_Target: {fileID: 122527602}
+        m_TargetAssemblyTypeName: _Source.Core.ProductionBuilding, Assembly-CSharp
+        m_MethodName: IncreaseResource
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -602,6 +635,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122527597}
   m_CullTransparentMesh: 1
+--- !u!114 &122527602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122527597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2ade2cadc743c4fa76dc2c18052c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resourceBank: {fileID: 1198111010}
+  _increaseDelta: 1
+  _resource: 1
 --- !u!1 &189573510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,8 +1545,8 @@ MonoBehaviour:
   - {fileID: 1520955142}
   - {fileID: 1002303695}
   - {fileID: 1528335235}
-  - {fileID: 1202989021}
   - {fileID: 1772161887}
+  - {fileID: 1202989021}
 --- !u!4 &932733264
 Transform:
   m_ObjectHideFlags: 0
@@ -2679,6 +2727,7 @@ GameObject:
   - component: {fileID: 1815223974}
   - component: {fileID: 1815223973}
   - component: {fileID: 1815223972}
+  - component: {fileID: 1815223975}
   m_Layer: 5
   m_Name: Button (Wood)
   m_TagString: Untagged
@@ -2750,14 +2799,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198111010}
-        m_TargetAssemblyTypeName: _Source.Core.ResourceBank, Assembly-CSharp
-        m_MethodName: Click
-        m_Mode: 3
+      - m_Target: {fileID: 1815223975}
+        m_TargetAssemblyTypeName: _Source.Core.ProductionBuilding, Assembly-CSharp
+        m_MethodName: IncreaseResource
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2800,6 +2849,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815223970}
   m_CullTransparentMesh: 1
+--- !u!114 &1815223975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815223970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2ade2cadc743c4fa76dc2c18052c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resourceBank: {fileID: 1198111010}
+  _increaseDelta: 1
+  _resource: 2
 --- !u!1 &2034581466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,8 +2898,8 @@ RectTransform:
   - {fileID: 1520955141}
   - {fileID: 1002303694}
   - {fileID: 1528335234}
-  - {fileID: 1202989020}
   - {fileID: 1772161886}
+  - {fileID: 1202989020}
   m_Father: {fileID: 200111374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -2917,6 +2981,7 @@ GameObject:
   - component: {fileID: 2051231839}
   - component: {fileID: 2051231838}
   - component: {fileID: 2051231837}
+  - component: {fileID: 2051231840}
   m_Layer: 5
   m_Name: Button (Gold)
   m_TagString: Untagged
@@ -2988,14 +3053,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198111010}
-        m_TargetAssemblyTypeName: _Source.Core.ResourceBank, Assembly-CSharp
-        m_MethodName: Click
-        m_Mode: 3
+      - m_Target: {fileID: 2051231840}
+        m_TargetAssemblyTypeName: _Source.Core.ProductionBuilding, Assembly-CSharp
+        m_MethodName: IncreaseResource
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3038,6 +3103,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051231835}
   m_CullTransparentMesh: 1
+--- !u!114 &2051231840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051231835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2ade2cadc743c4fa76dc2c18052c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resourceBank: {fileID: 1198111010}
+  _increaseDelta: 1
+  _resource: 4
 --- !u!1 &2099946558
 GameObject:
   m_ObjectHideFlags: 0
