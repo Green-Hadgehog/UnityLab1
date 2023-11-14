@@ -9,20 +9,30 @@ namespace _Source.Core
     [SerializeField] private ResourceBank _resourceBank;
     [SerializeField] private int _increaseDelta = 1;
     [SerializeField] private GameResource _resource;
+
     [SerializeField] private float _productionTime = 1;
+
+    private ObservableInt _productionLevel = new(1);
+
+    public ObservableInt GetProductionLevel()
+      => _productionLevel;
+
+    public void IncreaseProductionLevel()
+      => _productionLevel.Value++;
 
     public void IncreaseResource()
     {
       StartCoroutine(Increase());
     }
 
+    public float CalculateProductionTime()
+      => _productionTime - 0.4f * (_productionLevel.Value - 1);
+
     private IEnumerator Increase()
     {
-      yield return new WaitForSeconds(_productionTime);
+      float newProductionTime = CalculateProductionTime();
+      yield return new WaitForSeconds(newProductionTime);
       _resourceBank.ChangeResource(_resource, _increaseDelta);
     }
-
-    public float GetProductionTime()
-      => _productionTime;
   }
 }

@@ -731,9 +731,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceBank: {fileID: 1198111010}
-  _increaseDelta: 1
+  _increaseDelta: 40
   _resource: 4
-  _productionTime: 6
+  _productionTime: 10
 --- !u!1 &116120360
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 116120363}
   - component: {fileID: 116120362}
   m_Layer: 5
-  m_Name: Text (Human) (4)
+  m_Name: Text (Gold)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1013,6 +1013,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122527597}
   m_CullTransparentMesh: 1
+--- !u!1 &135452972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 135452973}
+  - component: {fileID: 135452974}
+  m_Layer: 0
+  m_Name: ShopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &135452973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135452972}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 500675075}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &135452974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135452972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16675c79040f24341b8cde9890590a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _productionBuildings:
+  - {fileID: 1470365207}
+  - {fileID: 1578164001}
+  - {fileID: 195968062}
+  - {fileID: 364837055}
+  - {fileID: 112780364}
+  _resourceBank: {fileID: 1198111010}
 --- !u!1 &189573510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,7 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceBank: {fileID: 1198111010}
-  _increaseDelta: 1
+  _increaseDelta: 40
   _resource: 2
   _productionTime: 2
 --- !u!1 &200111370
@@ -1404,7 +1455,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 211125366}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 135452974}
+        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
+        m_MethodName: HandleBuyClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 4 3 100
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &211125366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1530,7 +1593,7 @@ GameObject:
   - component: {fileID: 240508833}
   - component: {fileID: 240508832}
   m_Layer: 5
-  m_Name: Text (Human)
+  m_Name: Text (Wood)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1974,7 +2037,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 274488692}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 135452974}
+        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
+        m_MethodName: HandleBuyClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 0 4 20
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &274488692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2360,7 +2435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceBank: {fileID: 1198111010}
-  _increaseDelta: 1
+  _increaseDelta: 40
   _resource: 3
   _productionTime: 1.5
 --- !u!1 &378623032
@@ -2565,6 +2640,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494060779}
   m_CullTransparentMesh: 1
+--- !u!1 &500675074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 500675075}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &500675075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500675074}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 935.5218, y: 521.7964, z: -5.715155}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 681342840}
+  - {fileID: 1198111011}
+  - {fileID: 932733264}
+  - {fileID: 1042206685}
+  - {fileID: 135452973}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &503886899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3135,7 +3246,7 @@ GameObject:
   - component: {fileID: 619821705}
   - component: {fileID: 619821704}
   m_Layer: 5
-  m_Name: Text (Human) (3)
+  m_Name: Text (Stone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3504,12 +3615,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681342838}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -935.5218, y: -521.7964, z: 5.715155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 500675075}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &683240842
 GameObject:
@@ -3741,12 +3852,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932733262}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -935.5218, y: -521.7964, z: 5.715155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 500675075}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &995356347
 GameObject:
@@ -3958,6 +4069,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002303693}
   m_CullTransparentMesh: 1
+--- !u!1 &1042206684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1042206685}
+  - component: {fileID: 1042206686}
+  m_Layer: 0
+  m_Name: ProductionVisual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1042206685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042206684}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 500675075}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1042206686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042206684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c2e4fae41cd694aaf09a93764ba51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _productionLvlTexts:
+  - {fileID: 1462280059}
+  - {fileID: 255993636}
+  - {fileID: 240508832}
+  - {fileID: 619821704}
+  - {fileID: 116120362}
+  _productionBuildings:
+  - {fileID: 1470365207}
+  - {fileID: 1578164001}
+  - {fileID: 195968062}
+  - {fileID: 364837055}
+  - {fileID: 112780364}
+  _prefix: 'Lvl '
 --- !u!1 &1048155977
 GameObject:
   m_ObjectHideFlags: 0
@@ -4342,12 +4510,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198111009}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -935.5218, y: -521.7964, z: 5.715155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 500675075}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1202989019
 GameObject:
@@ -5210,7 +5378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceBank: {fileID: 1198111010}
-  _increaseDelta: 1
+  _increaseDelta: 40
   _resource: 0
   _productionTime: 3
 --- !u!1 &1513165092
@@ -5900,7 +6068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceBank: {fileID: 1198111010}
-  _increaseDelta: 1
+  _increaseDelta: 40
   _resource: 1
   _productionTime: 3
 --- !u!1 &1628988695
@@ -6021,7 +6189,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1638858190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 135452974}
+        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
+        m_MethodName: HandleBuyClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 2 4 10
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1638858190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6142,7 +6322,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1695227642}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 135452974}
+        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
+        m_MethodName: HandleBuyClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3 4 5
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1695227642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6914,7 +7106,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1950067426}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 135452974}
+        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
+        m_MethodName: HandleBuyClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 1 4 10
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1950067426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7148,7 +7352,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1982150075}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 135452974}
+        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
+        m_MethodName: HandleBuyClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 4 4 20
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1982150075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8153,8 +8369,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 681342840}
-  - {fileID: 932733264}
-  - {fileID: 1198111011}
   - {fileID: 200111374}
   - {fileID: 378623035}
+  - {fileID: 500675075}

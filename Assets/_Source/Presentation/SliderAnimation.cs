@@ -15,7 +15,9 @@ namespace _Source.Presentation
     private float _stepCooldown;
 
     [SerializeField] private float _pauseTime;
-    
+
+    private const float MINIMAL_ANIMATION_TIME = 0.01f;
+
     void Start()
     {
       _slider = gameObject.GetComponentInChildren<Slider>();
@@ -36,15 +38,23 @@ namespace _Source.Presentation
         CancelInvoke();
       }
     }
-    
+
     public void RunAnimation()
     {
       _button.interactable = false;
       _slider.value = 0;
       _sliderValueDelta = 1.0f / _countSteps;
-      _stepCooldown = (gameObject.GetComponentInChildren<ProductionBuilding>().GetProductionTime() - _pauseTime) / _countSteps;
+      float animationTime = gameObject.GetComponentInChildren<ProductionBuilding>().CalculateProductionTime() -
+                            _pauseTime;
+
+      if (animationTime <= 0)
+      {
+        _pauseTime = 0;
+        animationTime = MINIMAL_ANIMATION_TIME;
+      }
+
+      _stepCooldown = animationTime / _countSteps;
       InvokeRepeating(nameof(IncreaseSliderValue), _pauseTime, _stepCooldown);
     }
-
   }
 }
