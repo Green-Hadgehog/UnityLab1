@@ -1,9 +1,9 @@
-using _Source.Core;
+using Core;
 using UnityEngine;
 using Slider = UnityEngine.UI.Slider;
 using Button = UnityEngine.UI.Button;
 
-namespace _Source.Presentation
+namespace Presentation
 {
   public class SliderAnimation : MonoBehaviour
   {

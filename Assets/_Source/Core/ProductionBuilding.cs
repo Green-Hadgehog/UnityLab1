@@ -1,8 +1,7 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace _Source.Core
+namespace Core
 {
   public class ProductionBuilding : MonoBehaviour
   {
@@ -12,7 +11,7 @@ namespace _Source.Core
 
     [SerializeField] private float _productionTime = 1;
 
-    private ObservableInt _productionLevel = new(1);
+    private readonly ObservableInt _productionLevel = new(1);
 
     public ObservableInt GetProductionLevel()
       => _productionLevel;

@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 109750481}
   - component: {fileID: 109750480}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (Buy HumansLvl)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -731,9 +731,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceBank: {fileID: 1198111010}
-  _increaseDelta: 40
+  _increaseDelta: 1
   _resource: 4
-  _productionTime: 10
+  _productionTime: 4.5
 --- !u!1 &116120360
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 116120363}
   - component: {fileID: 116120362}
   m_Layer: 5
-  m_Name: Text (Gold)
+  m_Name: Text (GoldLvl)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1039,7 +1039,7 @@ Transform:
   m_GameObject: {fileID: 135452972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 815, y: -160, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1264,9 +1264,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceBank: {fileID: 1198111010}
-  _increaseDelta: 40
+  _increaseDelta: 1
   _resource: 2
-  _productionTime: 2
+  _productionTime: 1
 --- !u!1 &200111370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,12 +1457,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 135452974}
-        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
-        m_MethodName: HandleBuyClick
-        m_Mode: 5
+        m_TargetAssemblyTypeName: Core.ShopManager, Assembly-CSharp
+        m_MethodName: TryBuy
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: eb7eebada9037204984773f5839c5e31, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Core.BuyLevel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 4 3 100
@@ -1593,7 +1593,7 @@ GameObject:
   - component: {fileID: 240508833}
   - component: {fileID: 240508832}
   m_Layer: 5
-  m_Name: Text (Wood)
+  m_Name: Text (WoodLvl)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1833,7 +1833,7 @@ GameObject:
   - component: {fileID: 255993637}
   - component: {fileID: 255993636}
   m_Layer: 5
-  m_Name: Text (Food)
+  m_Name: Text (FoodLvl)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1968,7 +1968,7 @@ GameObject:
   - component: {fileID: 274488692}
   - component: {fileID: 274488691}
   m_Layer: 5
-  m_Name: BuyHumanButton
+  m_Name: BuyHumansButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2039,12 +2039,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 135452974}
-        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
-        m_MethodName: HandleBuyClick
-        m_Mode: 5
+        m_TargetAssemblyTypeName: Core.ShopManager, Assembly-CSharp
+        m_MethodName: TryBuy
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: c9e2a1622d27ee8499f1765199f90015, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Core.BuyLevel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 0 4 20
@@ -2435,9 +2435,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceBank: {fileID: 1198111010}
-  _increaseDelta: 40
+  _increaseDelta: 1
   _resource: 3
-  _productionTime: 1.5
+  _productionTime: 0.7
 --- !u!1 &378623032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,7 +2688,7 @@ GameObject:
   - component: {fileID: 503886902}
   - component: {fileID: 503886901}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (Buy Gold 1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3246,7 +3246,7 @@ GameObject:
   - component: {fileID: 619821705}
   - component: {fileID: 619821704}
   m_Layer: 5
-  m_Name: Text (Stone)
+  m_Name: Text (StoneLvl)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4138,7 +4138,7 @@ GameObject:
   - component: {fileID: 1048155980}
   - component: {fileID: 1048155979}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (Buy Wood)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4274,7 +4274,7 @@ GameObject:
   - component: {fileID: 1159572542}
   - component: {fileID: 1159572541}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (Buy Stone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4664,7 +4664,7 @@ GameObject:
   - component: {fileID: 1241180596}
   - component: {fileID: 1241180595}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (Buy Food)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5190,7 +5190,7 @@ GameObject:
   - component: {fileID: 1462280060}
   - component: {fileID: 1462280059}
   m_Layer: 5
-  m_Name: Text (Human)
+  m_Name: Text (HumansLvl)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5378,9 +5378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceBank: {fileID: 1198111010}
-  _increaseDelta: 40
+  _increaseDelta: 1
   _resource: 0
-  _productionTime: 3
+  _productionTime: 2.5
 --- !u!1 &1513165092
 GameObject:
   m_ObjectHideFlags: 0
@@ -6068,9 +6068,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resourceBank: {fileID: 1198111010}
-  _increaseDelta: 40
+  _increaseDelta: 1
   _resource: 1
-  _productionTime: 3
+  _productionTime: 2
 --- !u!1 &1628988695
 GameObject:
   m_ObjectHideFlags: 0
@@ -6191,12 +6191,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 135452974}
-        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
-        m_MethodName: HandleBuyClick
-        m_Mode: 5
+        m_TargetAssemblyTypeName: Core.ShopManager, Assembly-CSharp
+        m_MethodName: TryBuy
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 1f548d8436a2d074cbc79fc8876526b5, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Core.BuyLevel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 2 4 10
@@ -6324,12 +6324,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 135452974}
-        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
-        m_MethodName: HandleBuyClick
-        m_Mode: 5
+        m_TargetAssemblyTypeName: Core.ShopManager, Assembly-CSharp
+        m_MethodName: TryBuy
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: a16692fb7c5226544b890ce946a053bc, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Core.BuyLevel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 3 4 5
@@ -7108,12 +7108,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 135452974}
-        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
-        m_MethodName: HandleBuyClick
-        m_Mode: 5
+        m_TargetAssemblyTypeName: Core.ShopManager, Assembly-CSharp
+        m_MethodName: TryBuy
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: f63e2ba9470245648b3b65fb47e714d7, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Core.BuyLevel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 1 4 10
@@ -7354,12 +7354,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 135452974}
-        m_TargetAssemblyTypeName: _Source.Core.ShopManager, Assembly-CSharp
-        m_MethodName: HandleBuyClick
-        m_Mode: 5
+        m_TargetAssemblyTypeName: Core.ShopManager, Assembly-CSharp
+        m_MethodName: TryBuy
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: bcd66a6e824963042a848478c5ca1a66, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Core.BuyLevel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 4 4 20
@@ -7985,7 +7985,7 @@ GameObject:
   - component: {fileID: 2108277854}
   - component: {fileID: 2108277853}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (Buy Gold 2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

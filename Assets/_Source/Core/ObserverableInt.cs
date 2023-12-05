@@ -1,4 +1,4 @@
-﻿namespace _Source.Core
+﻿namespace Core
 {
   public class ObservableInt
   {

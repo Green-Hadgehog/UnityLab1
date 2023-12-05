@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace _Source.Core
+namespace Core
 {
   public class ResourceVisual : MonoBehaviour
   {

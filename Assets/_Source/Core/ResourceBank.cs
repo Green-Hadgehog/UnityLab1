@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace _Source.Core
+namespace Core
 {
   public class ResourceBank : MonoBehaviour
   {
